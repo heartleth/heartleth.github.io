@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>자랑스러운 동원고등학교</title>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <h1 style="text-align:center;">3례 3습은 설립자와 선생님들이 인성교육의 내면화 방향을 고민한 끝에 얻은 올바른 인성 함양의 실현체입니다.</h1>
+        <div class="conatiner">
+            <model-viewer bounds="tight" enable-pan src="untitled.glb" ar orbit-sensitivity="1.5" ar-modes="webxr scene-viewer quick-look" auto-rotate camera-controls poster="poster.webp" shadow-intensity="1.71" environment-image="neutral" shadow-softness="0.9" camera-orbit="-1013deg 72.66deg auto">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                <div id="ar-prompt">
+                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                </div>
+            </model-viewer>
+        </div>
+        <script>
+            window.onload = () => {    
+                let m = document.querySelector('model-viewer');
+                m.onmouseover = m.ontouchmove;
+            }
+        </script>
+    </body>
+</html>
